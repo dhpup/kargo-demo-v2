@@ -3,7 +3,16 @@ kind: Kustomization
 
 resources:
 - ../../base
+
+patches:
+- patch: |-
+    - op: replace
+      path: /spec/replicas
+      value: 3
+  target:
+    kind: Deployment
+    name: guestbook
 images:
 - name: ghcr.io/dhpup/guestbook
   newName: ghcr.io/dhpup/guestbook
-  newTag: 0.1.36
+  newTag: 0.1.37
