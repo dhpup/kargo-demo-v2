@@ -6,4 +6,4 @@ resources:
 images:
 - name: ghcr.io/dhpup/guestbook
   newName: ghcr.io/dhpup/guestbook
-  newTag: 0.1.38
+  newTag: 0.1.39
